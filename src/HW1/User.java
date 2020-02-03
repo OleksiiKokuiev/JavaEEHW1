@@ -8,13 +8,15 @@ public class User {
     private String firstName;
     private String lastName;
     private String phone;
+    private String email;
 
     private static List<User> listOfUsers = new ArrayList<User>();
 
-    public User(String firstName, String lastName, String phone) {
+    public User(String firstName, String lastName, String phone, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
+        this.email = email;
         listOfUsers.add(User.this);
     }
 
@@ -45,8 +47,8 @@ public class User {
         this.phone = phone;
     }
 
-    public void addUser (String firstName, String lastName, String phone){
-        User newUser = new User(firstName, lastName, phone);
+    public void addUser (String firstName, String lastName, String phone, String email){
+        User newUser = new User(firstName, lastName, phone, email);
         listOfUsers.add(newUser);
     }
 
@@ -54,7 +56,8 @@ public class User {
     public String toString() {
         return  firstName + " " +
                 lastName + " " +
-                phone;
+                phone + " " +
+                email;
     }
 
     public static String printAllUsersInHTMLDoc() {
