@@ -18,8 +18,9 @@ public class RegisterServlet extends HttpServlet {
         String firstName = req.getParameter("name");
         String lastName = req.getParameter("surname");
         String phone = req.getParameter("phone");
+        String email = req.getParameter("email");
 
-        User user = new User(firstName, lastName, phone);
+        User user = new User(firstName, lastName, phone, email);
 
         resp.getWriter().println(String.format(TEMPLATE, "New user has been successfully added." + "<br>" +
                 "Click back button to add one more user " + "or " +
