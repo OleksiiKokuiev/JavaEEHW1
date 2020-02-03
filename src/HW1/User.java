@@ -46,6 +46,14 @@ public class User {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+    
+     public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public void addUser (String firstName, String lastName, String phone, String email){
         User newUser = new User(firstName, lastName, phone, email);
